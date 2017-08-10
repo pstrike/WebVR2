@@ -2,12 +2,9 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>360&deg; Image</title>
+    <title>玩赚VR</title>
     <meta name="description" content="360&deg; Image - A-Frame">
     <script src="dist/aframe-master.js"></script>
-    <script class="jsbin" src="js/jquery.min.js"></script>
-    <script class="jsbin" src="js/jquery-ui.min.js"></script>
-
     <script type="text/javascript">
 
         function readURL(input) {
@@ -18,10 +15,7 @@
 //                    $('#vrImage').attr('src', e.target.result);
 //                };
 
-                reader.onloadend = function (e) {
-                    //console.log(e.target.result);
-                    console.log($('#vrImage').attr("src"));
-                    //$('#vrImage').attr('src', e.target.result);
+                reader.onload = function (e) {
                     document.querySelector('#vrImage').setAttribute('src', e.target.result);
                 };
 
