@@ -9,17 +9,21 @@
 
         function readURL(input) {
             if (input.files && input.files[0]) {
-                var reader = new FileReader();
+//                var reader = new FileReader();
 
 //                reader.onload = function (e) {
 //                    $('#vrImage').attr('src', e.target.result);
 //                };
 
-                reader.onload = function (e) {
-                    document.querySelector('#vrImage').setAttribute('src', e.target.result);
-                };
+//                reader.onload = function (e) {
+//                    document.querySelector('#vrImage').setAttribute('src', e.target.result);
+//                };
+//
+//                reader.readAsDataURL(input.files[0]);
 
-                reader.readAsDataURL(input.files[0]);
+                pictureObjectURL = URL.createObjectURL(input.files[0]);
+                console.log(pictureObjectURL);
+                document.querySelector('#vrImage').setAttribute('src', pictureObjectURL);
             }
         }
     </script>
