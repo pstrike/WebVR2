@@ -20,6 +20,7 @@
 
                 reader.onloadend = function (e) {
                     console.log(e.target.result);
+                    console.log($('#vrImage').attr("src"));
                     $('#vrImage').attr('src', e.target.result);
                 };
 
