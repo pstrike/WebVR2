@@ -22,7 +22,6 @@
 //                reader.readAsDataURL(input.files[0]);
 
                 pictureObjectURL = URL.createObjectURL(input.files[0]);
-                console.log(pictureObjectURL);
                 document.querySelector('#vrImage').setAttribute('src', pictureObjectURL);
             }
         }
