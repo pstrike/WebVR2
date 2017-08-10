@@ -19,9 +19,10 @@
 //                };
 
                 reader.onloadend = function (e) {
-                    console.log(e.target.result);
+                    //console.log(e.target.result);
                     console.log($('#vrImage').attr("src"));
-                    $('#vrImage').attr('src', e.target.result);
+                    //$('#vrImage').attr('src', e.target.result);
+                    document.querySelector('#vrImage').setAttribute('src', e.target.result);
                 };
 
                 reader.readAsDataURL(input.files[0]);
